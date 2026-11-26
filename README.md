@@ -34,6 +34,14 @@ npm run dev
 - **Réinitialiser la base** : `docker compose down -v` (`init.sql` ne s'exécute que sur un volume vide).
 - **Linux : `permission denied` sur Docker** : `sudo usermod -aG docker $USER`, puis se déconnecter et se reconnecter.
 
+## Contribuer
+
+- **Un ticket, une branche** : partir de `main` à jour et nommer la branche `type/numero-description` (ex. `docs/21-equipe-chaudettom`, `chore/7-commitlint`).
+- **Messages de commit** au format [Conventional Commits](https://www.conventionalcommits.org/fr/) : `type: description` (`feat`, `fix`, `docs`, `chore`, `refactor`, `test`…).
+- **Une pull request par ticket**, avec `Closes #n` dans la description, relue et approuvée par au moins un·e coéquipier·e.
+- **Fusion en squash merge** uniquement ; personne ne pousse directement sur `main`.
+- **Hooks Git** : installés automatiquement par `npm install` (script `prepare` → Husky). Ils refusent les messages de commit non conformes.
+
 ## Équipe
 
 - Tom (@chaudettom)
