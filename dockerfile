@@ -1,18 +1,15 @@
-# Image de départ avec le runtime
 FROM node:26-alpine
-
-# Dossier de travail dans le conteneur
 WORKDIR /app
+ENV MOD_ENV=production
 
-# On copie d'abord les dépendances (meilleur cache)
 COPY package*.json ./
-RUN npm ci --omit=dev
+RUN npm ci --omit=dev --ignore-scripts
 
-# Puis le reste du code
-COPY . .
+COPY src/ ./src/
+COPY public/ ./public/
 
-# Port sur lequel l'app écoute
+user node
+
 EXPOSE 3000
 
-# Commande de démarrage
 CMD ["node", "server.js"]
