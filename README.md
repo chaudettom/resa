@@ -35,4 +35,6 @@ npm run dev
 - **Linux : `permission denied` sur Docker** : `sudo usermod -aG docker $USER`, puis se déconnecter et se reconnecter.
 
 ## Équipe
+
 - Tom (@chaudettom)
+- Owen (@Own-667AI)
