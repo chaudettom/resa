@@ -36,4 +36,5 @@ npm run dev
 
 ## Équipe
 
-- Owen (Own-667AI)
+- Tom (@chaudettom)
+- Owen (@Own-667AI)
